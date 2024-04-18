@@ -6,14 +6,15 @@ public class Principal {
 		
 		int funcion=pedirFuncion();
 		double[] numeros=pedirNumeros();	
-		double resultado=calculadura(funcion, numeros[0], numeros[1]);
+		double resultado=calculadora(funcion, numeros[0], numeros[1]);
 
 		
 		System.out.println(resultado);
 
+		
 	}
 
-	public static double calculadora(int opcion, int num1, int num2){
+	public static double calculadora(int opcion, double num1, double num2){
 		
 		double resultado = 0;
 		switch(opcion){
@@ -35,14 +36,19 @@ public class Principal {
 		}
 
 		return resultado;
+	
+	}
 
 	public static int pedirFuncion () {
 		
 		Scanner teclado=new Scanner(System.in);
 		int funcion=0;
 
-		System.out.println("Hola buenos dias, que funcion quieres que haga: 1.Sumar 2.Restar 3.Multiplicar 4.Dividir);
+		System.out.println("Hola buenos dias, que funcion quieres que haga: 1.Sumar 2.Restar 3.Multiplicar 4.Dividir");
 		funcion=teclado.nextInt();
+		teclado.nextLine();
+
+		return funcion;
 	}
 
 	public static double[] pedirNumeros() {
@@ -54,8 +60,10 @@ public class Principal {
 		
 		System.out.println("Introduce un numero: ");
 		num1=teclado.nextDouble();
+		teclado.nextLine();
 		System.out.println("Introduce otro numero: ");
 		num2=teclado.nextDouble();
+		teclado.nextLine();
 
 		numeros[0]=num1;
 		numeros[1]=num2;
