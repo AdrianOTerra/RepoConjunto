@@ -1,11 +1,12 @@
+import java.util.Scanner;
 
 public class Principal {
 
 	public static void main(String[] args) {
 		
 		int funcion=pedirFuncion();
-		double[] numeros=pedirNumeros();
-		calculadura(funcion, numeros[0], numeros[1]);
+		double[] numeros=pedirNumeros();	
+		double resultado=calculadura(funcion, numeros[0], numeros[1]);
 
 		
 		
@@ -32,7 +33,7 @@ public class Principal {
 		}
 
 		return resultado;
-=======
+
 	public static int pedirFuncion () {
 		
 		Scanner teclado=new Scanner(System.in);
@@ -58,7 +59,7 @@ public class Principal {
 		numeros[1]=num2;
 
 		return numeros;
->>>>>>> 4df5e203948e03552212d98e97c3b1bee4e39cf4
+
 	}
 
 }
