@@ -9,7 +9,7 @@ public class Principal {
 		double resultado=calculadura(funcion, numeros[0], numeros[1]);
 
 		
-		
+		System.out.println(resultado);
 
 	}
 
@@ -30,6 +30,8 @@ public class Principal {
 		case 4:
 		resultado = num1*num2;
 			break;
+		default:
+			System.out.println("Elección no válida");
 		}
 
 		return resultado;
